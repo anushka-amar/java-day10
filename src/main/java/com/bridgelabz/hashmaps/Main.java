@@ -27,5 +27,11 @@ public class Main {
 
         System.out.println("\n\nThe frequency of words in the paragraph is:-");
         hashMap2.displayFreq();
+
+        hashMap2.removeWord("avoidable");
+
+        System.out.println("\n\nThe frequency of words in the paragraph after removal is:-");
+        hashMap2.displayFreq();
+
     }
 }

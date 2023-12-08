@@ -43,6 +43,22 @@ public class MyHashMap {
         }
     }
 
+    /* method to remove a prticular word from
+     hash-table */
+    public void removeWord(String word){
+        int bucketidx = getBucketIndex(word); //reteives index at a particular index
+        LinkedList<MyMapNode> bucket = buckets[bucketidx];
+
+        MyMapNode node =  getNodeByKey(bucket, word);
+        if(node != null){
+            bucket.remove(node);
+            return;
+        }
+        else {
+            System.out.println("Node does not exist");
+        }
+    }
+
     private MyMapNode getNodeByKey(LinkedList<MyMapNode> bucket, String key){
         for(MyMapNode node: bucket){
             if(node.getKey().equals(key)){
